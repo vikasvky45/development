@@ -1,23 +1,22 @@
-name: Build an images
+name: Build an image
 
 on: 
- pull_request:
-   branches:
-     - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps: 
-    -  name: checkout code
-       uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    - name: setup of docker Build
+    - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
       
     - name: Build Docker image
       run: |
-        docker build -t my-app-image
+        docker build -t my-app-image .
 
-     
