@@ -1,4 +1,4 @@
-name: Build an image
+name: Build an images
 
 on: 
  pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps: 
     -  name: checkout code
